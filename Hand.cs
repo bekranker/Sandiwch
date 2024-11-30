@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+//--------------------------------------------------------;
+//--------------------------------------------------------;
+//----------------------SORRY FOR NESTY CODE--------------;
+//--------------------------------------------------------;
+//--------------------------------------------------------;
 public class Hand : MonoBehaviour
 {
     [SerializeField, Range(0, 10)] private float _ColliderArea;
