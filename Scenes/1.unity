@@ -9576,10 +9576,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3109531530301947748, guid: cdfc71ee175564754b169cded0229763, type: 3}
-      propertyPath: _JumpCut
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5891022431725279006, guid: cdfc71ee175564754b169cded0229763, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9611,6 +9607,18 @@ PrefabInstance:
     - target: {fileID: 7285064591009404965, guid: cdfc71ee175564754b169cded0229763, type: 3}
       propertyPath: _GravityMultiplier
       value: 2.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511040507819314305, guid: cdfc71ee175564754b169cded0229763, type: 3}
+      propertyPath: m_Size.x
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511040507819314305, guid: cdfc71ee175564754b169cded0229763, type: 3}
+      propertyPath: m_Size.y
+      value: 2.1502178
+      objectReference: {fileID: 0}
+    - target: {fileID: 7511040507819314305, guid: cdfc71ee175564754b169cded0229763, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.013219476
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10780,7 +10788,7 @@ Transform:
   m_GameObject: {fileID: 2111387822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11, y: -1.15, z: 0}
+  m_LocalPosition: {x: 7, y: 0.00000011920929, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10799,10 +10807,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d26874df22804d17975ba56a0f72d89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _InfluenceRange: 9.9
+  _InfluenceRange: 17
   _Intensity: 15.6
   _Sp: {fileID: 330056267}
-  _Size: {x: 2.2, y: 12.2}
+  _Size: {x: 2.4, y: 12.4}
   _PlayerLayer:
     serializedVersion: 2
     m_Bits: 256

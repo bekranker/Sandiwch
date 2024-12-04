@@ -279,7 +279,7 @@ MonoBehaviour:
   _Speed: 4
   _Rb: {fileID: 7554279850582618044}
   _Grounded: {fileID: 2678024483813578484}
-  _JumpCut: 0.113
+  _JumpCut: 0.299
   _sp: {fileID: 5891022431725279006}
   _fuckThisTime: 0
   CanJump: 0

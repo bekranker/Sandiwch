@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
                 _Rb.linearVelocityY = 0;
             }
         }
-        _directionX = Input.GetAxis("Horizontal");
+        _directionX = Input.GetAxisRaw("Horizontal");
 
         if (_directionX != 0)
             _sp.flipX = _directionX <= 0 ? true : false;

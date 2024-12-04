@@ -96,20 +96,19 @@ public class Blue : MonoBehaviour
                 #region Player Glitch from Left to Above or Bottom
                 if (playerCol.transform.position.y >= (transform.position.y + _BoxCollider2D.size.y / 2) - .03f)
                 {
-
-                    _playerRB.linearVelocity = Vector2.zero;
-                    playerCol.transform.position = new Vector3(transform.position.x - (_BoxCollider2D.size.x / 2) + .5f, playerCol.transform.position.y + .4f, 0);
                     _rotateTo = 0;
                     playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
+                    _playerRB.linearVelocity = Vector2.zero;
+                    playerCol.transform.position = new Vector3(transform.position.x - (_BoxCollider2D.size.x / 2) + .5f, playerCol.transform.position.y + 1, 0);
                     return;
 
                 }
                 else if (playerCol.transform.position.y <= (transform.position.y - _BoxCollider2D.size.y / 2) - .03f)
                 {
-                    _playerRB.linearVelocity = Vector2.zero;
-                    playerCol.transform.position = new Vector3(transform.position.x - (_BoxCollider2D.size.x / 2) + .5f, playerCol.transform.position.y - .4f, 0);
                     _rotateTo = -180;
                     playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
+                    _playerRB.linearVelocity = Vector2.zero;
+                    playerCol.transform.position = new Vector3(transform.position.x - (_BoxCollider2D.size.x / 2) + .5f, playerCol.transform.position.y - .4f, 0);
                     return;
                 }
                 #endregion
@@ -122,7 +121,6 @@ public class Blue : MonoBehaviour
 
                 _rotateTo = -90;
                 playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
-
 
                 //apply gravity in X direction (i.e gravity direction is Left)
                 if (_distanceToPlayer <= _InfluenceRange)
@@ -140,19 +138,18 @@ public class Blue : MonoBehaviour
                 #region Player Glitch from Right to Above or Bottom
                 if (playerCol.transform.position.y >= (transform.position.y + _BoxCollider2D.size.y / 2) - .03f)
                 {
-                    _playerRB.linearVelocity = Vector2.zero;
-                    playerCol.transform.position = new Vector3(transform.position.x + (_BoxCollider2D.size.x / 2) - .5f, playerCol.transform.position.y + .4f, 0);
                     _rotateTo = 0;
                     playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
+                    playerCol.transform.position = new Vector3(transform.position.x + (_BoxCollider2D.size.x / 2) - .5f, playerCol.transform.position.y + 1, 0);
                     return;
 
                 }
                 else if (playerCol.transform.position.y <= (transform.position.y - _BoxCollider2D.size.y / 2) - .03f)
                 {
-                    _playerRB.linearVelocity = Vector2.zero;
-                    playerCol.transform.position = new Vector3(transform.position.x + (_BoxCollider2D.size.x / 2) - .5f, playerCol.transform.position.y - .4f, 0);
                     _rotateTo = -180;
                     playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
+                    _playerRB.linearVelocity = Vector2.zero;
+                    playerCol.transform.position = new Vector3(transform.position.x + (_BoxCollider2D.size.x / 2) - .5f, playerCol.transform.position.y - .4f, 0);
                     return;
 
                 }
@@ -186,19 +183,19 @@ public class Blue : MonoBehaviour
                 if (playerCol.transform.position.x >= (transform.position.x + _BoxCollider2D.size.x / 2) - .03f)
                 {
                     _playerRB.linearVelocity = Vector2.zero;
-                    playerCol.transform.position = new Vector3(transform.position.x + (_BoxCollider2D.size.x / 2) + .4f, playerCol.transform.position.y - .5f, 0);
                     _rotateTo = -90;
                     playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
+                    playerCol.transform.position = new Vector3(transform.position.x + (_BoxCollider2D.size.x / 2) + .3f, playerCol.transform.position.y - .5f, 0);
                     return;
 
                 }
                 //To Left
                 else if (playerCol.transform.position.x <= (transform.position.x - _BoxCollider2D.size.x / 2) + .03f)
                 {
-                    _playerRB.linearVelocity = Vector2.zero;
-                    playerCol.transform.position = new Vector3(transform.position.x - (_BoxCollider2D.size.x / 2) - .4f, playerCol.transform.position.y - .5f, 0);
                     _rotateTo = 90;
                     playerCol.transform.rotation = Quaternion.Euler(0, 0, _rotateTo);
+                    _playerRB.linearVelocity = Vector2.zero;
+                    playerCol.transform.position = new Vector3(transform.position.x - (_BoxCollider2D.size.x / 2) - .3f, playerCol.transform.position.y - .5f, 0);
                     return;
 
                 }
