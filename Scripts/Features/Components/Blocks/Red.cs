@@ -6,14 +6,10 @@ using DG.Tweening;
 //--------------------------------------------------------;
 //--------------------------------------------------------;
 
-public class Red : MonoBehaviour
+public class Red : MonoBehaviour, IBlock
 {
-    [SerializeField] private AreaEffector2D _Wind;
-    [SerializeField] private LayerMask _Player;
     [SerializeField] private SpriteRenderer _Sp;
-    [SerializeField] private float _Distance;
     private Vector3 _startPos;
-    private bool _canMove;
 
     private Vector2 _startVelocity;
     void Start()
@@ -25,10 +21,11 @@ public class Red : MonoBehaviour
     {
         if (cols.CompareTag("Player"))
         {
-            _startVelocity = cols.GetComponent<Rigidbody2D>().linearVelocity;
-            cols.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-            cols.GetComponent<Rigidbody2D>().AddForceX(_startVelocity.x * 50, ForceMode2D.Impulse);
-            cols.GetComponent<Rigidbody2D>().AddForceY(10, ForceMode2D.Impulse);
+            Rigidbody2D rb = cols.GetComponent<Rigidbody2D>();
+            _startVelocity = rb.linearVelocity;
+            rb.linearVelocity = Vector2.zero;
+            rb.AddForceX(_startVelocity.x * 50, ForceMode2D.Impulse);
+            rb.AddForceY(10, ForceMode2D.Impulse);
 
             _Sp.transform.DOLocalMoveY(-2, 0.3f);
         }
@@ -38,7 +35,6 @@ public class Red : MonoBehaviour
         DOTween.Kill(_Sp);
         if (cols.CompareTag("Player"))
         {
-
             _Sp.transform.DOLocalMoveY(0, .3f);
         }
     }

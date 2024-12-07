@@ -58,8 +58,3 @@ public class Elevator : ActionExecute
   }
 
 }
-public abstract class ActionExecute : MonoBehaviour
-{
-  public abstract Tween ComeBack();
-  public abstract void Execute();
-}

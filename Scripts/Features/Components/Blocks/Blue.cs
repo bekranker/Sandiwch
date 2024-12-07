@@ -6,7 +6,7 @@ using DG.Tweening;
 //--------------------------------------------------------;
 //--------------------------------------------------------;
 
-public class Blue : MonoBehaviour
+public class Blue : MonoBehaviour, IBlock
 {
 
     [Header("Custom Gravity")]

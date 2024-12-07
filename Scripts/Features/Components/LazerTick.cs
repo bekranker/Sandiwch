@@ -34,11 +34,6 @@ public class LazerTick : ActionExecute
 	}
 	public override void Execute()
 	{
-		_kill = true;
-		Destroy(gameObject);
 		DOTween.Kill(transform);
-		_LineRenderer.enabled = false;
-		_RubbicSparks.SetActive(false);
-		_sparks.SetActive(false);
 	}
 }

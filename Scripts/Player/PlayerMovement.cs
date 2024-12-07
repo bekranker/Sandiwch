@@ -77,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (_Grounded.IsGrounded())
         {
-            print("I ma trying to jump");
             _Rb.AddForce(_JumpForce * 100 * transform.up);
             _Rb.gravityScale = 1;
             CanJump = false;

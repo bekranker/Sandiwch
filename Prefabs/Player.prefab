@@ -338,6 +338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _RedColor: {r: 1, g: 0.7688679, b: 0.7688679, a: 1}
   _BlueColor: {r: 0.75, g: 0.9483814, b: 1, a: 1}
+  _PanelColorRed: {r: 1, g: 0, b: 0, a: 0.02745098}
+  _PanelColorBlue: {r: 0, g: 0, b: 1, a: 0.02745098}
+  _Panel: {fileID: 0}
   _PlayerType: 1
   _SpriteRenderer: {fileID: 5891022431725279006}
   _Speed: 1

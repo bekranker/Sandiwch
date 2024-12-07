@@ -14,7 +14,7 @@ public class Hand : MonoBehaviour
     [SerializeField] private LayerMask _KeyLayer;
     [SerializeField] private Animator _anim;
     private Environment _holdingObject;
-    public static event Action OnLeave, OnPlug, OnUnPlug;
+    public static event Action OnLeave, OnPlug, OnUnPlug, OnTake;
     Collider2D[] _plugs;
     Collider2D[] _environments;
     void Update()
@@ -56,24 +56,22 @@ public class Hand : MonoBehaviour
     }
     void TakeObject()
     {
-        print("Taking");
         _holdingObject = NearestEnvironment();
         if (_holdingObject != null)
         {
             _holdingObject.TakeMe(transform);
+            OnTake?.Invoke();
         }
     }
     void LeaveObject()
     {
         if (_holdingObject == null) return;
         _holdingObject.transform.SetParent(null);
-        print("Putting");
         _holdingObject.PutMe(NearestPlugArea());
         _holdingObject = null;
     }
     void ExecuteInput()
     {
-        print("Executing");
         if (_holdingObject != null)
             LeaveObject();
         else
