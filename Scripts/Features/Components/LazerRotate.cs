@@ -5,11 +5,21 @@ public class LazerRotate : MonoBehaviour
     [SerializeField] private float _TargetRotate;
     [SerializeField] private Transform _LaserT;
     [SerializeField] private float _Speed;
+    [SerializeField] private Lazer _Lazer;
+
     private Vector3 _startRot;
     void Start()
     {
         _startRot = _LaserT.rotation.eulerAngles;
         RotateExecute();
+    }
+    void OnEnable()
+    {
+        _Lazer.OnOpen += RotateExecute;
+    }
+    void OnDisable()
+    {
+        _Lazer.OnOpen -= RotateExecute;
     }
     void RotateExecute()
     {

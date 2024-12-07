@@ -1,27 +1,29 @@
 using DG.Tweening;
 using UnityEngine;
 
-public class LazerTick : ActionExecute
+public class LazerTick : MonoBehaviour
 {
 	[SerializeField] private GameObject _sparks;
 	[SerializeField] private GameObject _RubbicSparks;
 	[SerializeField] private LineRenderer _LineRenderer;
-	[SerializeField] private Transform _From;
+	[SerializeField] private Lazer _Lazer;
+
 	[SerializeField, Range(0, 10)] private float _Delay;
 	private bool _closed;
-	private bool _kill;
 	void Start()
 	{
 		Tick();
 	}
-
-	public override Tween ComeBack()
+	void OnEnable()
 	{
-		return null;
+		_Lazer.OnOpen += Tick;
+	}
+	void OnDisable()
+	{
+		_Lazer.OnOpen -= Tick;
 	}
 	private void Tick()
 	{
-		if (_kill) return;
 		DOVirtual.DelayedCall(_Delay, () =>
 		{
 			_closed = !_closed;
@@ -31,9 +33,5 @@ public class LazerTick : ActionExecute
 			Tick();
 		});
 
-	}
-	public override void Execute()
-	{
-		DOTween.Kill(transform);
 	}
 }

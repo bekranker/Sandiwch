@@ -1,5 +1,5 @@
+using System;
 using DG.Tweening;
-using Unity.Mathematics;
 using UnityEngine;
 
 //--------------------------------------------------------;
@@ -18,8 +18,11 @@ public class Lazer : ActionExecute
     [SerializeField] private LineRenderer _LineRenderer;
     [SerializeField] private Transform _From;
 
+    public event Action OnClose, OnOpen;
+
     public override Tween ComeBack()
     {
+        OnOpen?.Invoke();
         _LineRenderer.gameObject.SetActive(true);
         _Sparks.gameObject.SetActive(true);
         return null;
@@ -27,6 +30,7 @@ public class Lazer : ActionExecute
 
     public override void Execute()
     {
+        OnClose?.Invoke();
         _LineRenderer.gameObject.SetActive(false);
         _Sparks.gameObject.SetActive(false);
     }
@@ -39,7 +43,7 @@ public class Lazer : ActionExecute
 
         if (hit.collider != null)
         {
-            float distance = ((Vector2)hit.point - (Vector2)_From.position).magnitude;
+            float distance = (hit.point - (Vector2)_From.position).magnitude;
             _LineRenderer.SetPosition(1, new Vector2(0, -distance));
             _Sparks.transform.position = hit.point;
         }

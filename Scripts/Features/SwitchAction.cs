@@ -24,20 +24,22 @@ public class SwitchAction : MonoBehaviour
 
   public void Execute()
   {
-    print("Executing the action");
-    foreach (ActionExecute item in _actionToExecute)
+    _actionToExecute.ForEach((item) =>
     {
-      item.Execute();
-      print("execture");
-    }
+      if (item != null)
+      {
+        item.Execute();
+      }
+    });
   }
   public void Reverse()
   {
-    print("Executing the ComeBack action");
-    foreach (ActionExecute item in _actionToExecute)
+    _actionToExecute.ForEach((item) =>
     {
-      item.ComeBack();
-    }
-
+      if (item != null)
+      {
+        item.ComeBack();
+      }
+    });
   }
 }

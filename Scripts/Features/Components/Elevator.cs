@@ -19,9 +19,12 @@ public class Elevator : ActionExecute
   [SerializeField, Range(0, 10)] private float _Speed;
   [SerializeField] private bool _loop;
   [SerializeField] private SpriteRenderer _Sp;
+  [SerializeField] private bool _StartOnPlay;
   void Start()
   {
     DOTween.Init();
+    if (_StartOnPlay)
+      Execute();
   }
   public override void Execute()
   {

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Try
+  m_Name: FullScreenParticleShader
   m_Shader: {fileID: -6465566751694194690, guid: 3c9195fe3b84843829c6e033cfd7bb25, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,6 +42,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 5.99
     - _FullScreenIntensity: 0.1
     - _Fullscreen_AlphaBlendOperation: 0
     - _Fullscreen_BlendMode: 4
@@ -60,7 +61,7 @@ Material:
     - _Fullscreen_StencilReadMask: 255
     - _Fullscreen_StencilReference: 0
     - _Fullscreen_StencilWriteMask: 255
-    - _NumberOfVoroniCell: 7
+    - _NumberOfVoroniCell: 5
     - _QueueControl: 0
     - _QueueOffset: 6
     - _Speed: 1
@@ -68,7 +69,7 @@ Material:
     - _VignettePower: -1.18
     - _VoronettiIntensity: -0.2
     m_Colors:
-    - _Color: {r: 7.561089, g: 2.2162635, b: 0.8313238, a: 1}
+    - _Color: {r: 0.310503, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5879952875674264727

@@ -4988,10 +4988,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6843c121070774e159578f53b79a4179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sparks: {fileID: 0}
+  _sparks: {fileID: 6343263185653193852}
   _RubbicSparks: {fileID: 6343263185653193852}
   _LineRenderer: {fileID: 7786811491812185436}
-  _From: {fileID: 0}
+  _Lazer: {fileID: 6332184568633835525}
   _Delay: 0.78
 --- !u!114 &6332184568633835525
 MonoBehaviour:
@@ -5005,9 +5005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bce4e05c5a7c4fc390a088575751745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Sparks: {fileID: 0}
+  _Sparks: {fileID: 6343263185653193852}
   _Everything:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2047
   _LineRenderer: {fileID: 7786811491812185436}
   _From: {fileID: 0}

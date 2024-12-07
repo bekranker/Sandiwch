@@ -175,6 +175,7 @@ MonoBehaviour:
   _TargetRotate: 30
   _LaserT: {fileID: 1976253029859475072}
   _Speed: 1
+  _Lazer: {fileID: 7544078344038593760}
 --- !u!1 &4065889422421219130
 GameObject:
   m_ObjectHideFlags: 0
