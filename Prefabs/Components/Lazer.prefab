@@ -76,8 +76,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1152156765
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -153,10 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bce4e05c5a7c4fc390a088575751745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Sparks: {fileID: 0}
+  _Sparks: {fileID: 6239400073121548525}
   _Everything:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2047
   _LineRenderer: {fileID: 791012507026137666}
   _From: {fileID: 0}
 --- !u!1 &6239400073121548525
